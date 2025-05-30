@@ -1,0 +1,162 @@
+/* Variables de color */
+:root {
+    --verde-claro: #2C6E49;
+    --amarillo: #F2B134;
+    --fondo: #F9F6F0;
+    --texto-principal: #333333;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto-principal);
+    margin: 0;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem; /* más pequeño que antes, ajusta a gusto */
+    margin-bottom: 0.3em;
+    color: var(--verde-claro);
+}
+
+header p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: var(--amarillo);
+}
+
+/* Slider */
+
+.slider-container {
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    padding: 20px 30px;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.slide.active {
+    display: block;
+}
+
+h2, h3 {
+    color: var(--verde-claro);
+}
+
+h3 {
+    color: var(--amarillo);
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+/* Botones de slider */
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.slider-controls button {
+    background-color: var(--verde-claro);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.slider-controls button:hover {
+    background-color: #7ca68a;
+}
+
+/* Animación fade */
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-derecha {
+    width: 250px;
+    height: auto;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.slide-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap; /* para que en pantallas chicas el contenido se apile */
+}
+
+.slide-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.slide-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.subtitulo {
+  font-weight: 700; /* más grueso */
+  color: #2C3E50;   /* asegúrate que sea el mismo color del h1, cambia si es diferente */
+  font-size: 1rem;  /* puedes ajustar el tamaño si lo deseas */
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif; /* igual que el título */
+}
